@@ -11,6 +11,8 @@ public class xpathscript {
         driver.findElement(By.xpath("//input[@name='rate']/following::input[1]")).sendKeys("10");
         driver.findElement(By.xpath("//input[@value='Calculate']")).click();
         String s=driver.findElement(By.xpath("//input[@name='Button1']/following::input[@id='EMI']")).getAttribute("value");
+
         System.out.println(s);
+        driver.findElement(By.linkText("Bank Holidays")).click();
     }
 }
